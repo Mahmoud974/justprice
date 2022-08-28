@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link href="style.css" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<title>Les boîtes de dialogues </title>
+</head>
+<body class="bg-teal-900  mx-auto">
+   <div class="max-w-2xl mx-auto px-3 ">
+    <h1 class="text-7xl mt-10 text-center font-extrabold uppercase text-slate-50">Le juste Prix 🤑 </h1>
+    <div class="divInput max-w-2xl mx-auto h-52 rounded-xl shadow-xl flex justify-center mt-12 bg-slate-50">
+       <form action="" class= "flex flex-col my-auto ">
+
+        <input type="number" name="" id="" min='0' max='10' placeholder="Deviner le prix ! (entre 0 à 10)" class="rounded shadow-md ring-2 w-96 ring-slate-400">
+        <input type="submit" class="myInput rounded bg-blue-400 mt-2 text-white font-bold uppercase px-2 w-18 h-6 shadow-md ring-2 ring-blue-400" value="Deviner">
+    <input type="text" name="" placeholder="Bonne réponse" id="" class="good text-center bg-emerald-700 text-white uppercase font-bold rounded-md mt-2 " onpaste="return false;" onkeypress="return false;">  
+    <input type="text" name="" placeholder="Mauvaise réponse" id=""
+        class="bad text-center bg-red-700 text-white uppercase font-bold rounded-md mt-2 " onpaste="return false;"
+        onkeypress="return false;">
+    </form>
+  
+    </div>
+    
+    <div class="plus mt-6 shadow-xl rounded-md bg-red-400 h-12 w-auto " >
+        <p class="myRed text-white text-center uppercase font-extrabold py-3">C'est plus +</p>
+    </div>
+    <div class="less myOrange mt-4 shadow-xl rounded-md bg-orange-500 h-12 w-auto ">
+        <p class="text-white text-center uppercase font-extrabold py-3 ">C'est plus -</p>
+    </div>
+    
+   </div>
+   <script src="script.js"></script>
+</body>
+</html>
