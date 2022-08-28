@@ -20,41 +20,39 @@ plus.style.display = "none";
 less.style.display = "none";
 
 console.log("Le nombre est de " + randomNumber);
-try {
-  input.addEventListener("input", (e) => {
-    const typeMyNumber = () => {
-      choiceNumber = e.target.value;
-    };
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
-      typeMyNumber();
-      if (choiceNumber == randomNumber) {
-        const veryGood = () => {
-          myRed.style.display = "none";
-          plus.style.display = "none";
-          less.style.display = "none";
-          myOrange.style.display = "";
-        };
 
-        return veryGood();
-      } else if (choiceNumber < randomNumber) {
-        const lessRandom = () => {
-          choiceNumber++;
-          console.log(choiceNumber);
-          myOrange.style.display = "none";
-          plus.style.display = "";
-          myRed.style.display = "";
-        };
-        return lessRandom();
-      } else {
-        const plusRandom = () => {
-          plus.style.display = "none";
-          less.style.display = "";
-        };
-        return plusRandom();
-      }
-    });
+input.addEventListener("input", (e) => {
+  const typeMyNumber = () => {
+    choiceNumber = e.target.value;
+  };
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    typeMyNumber();
+    if (choiceNumber == randomNumber) {
+      const veryGood = () => {
+        myRed.style.display = "none";
+        plus.style.display = "none";
+        less.style.display = "none";
+        myOrange.style.display = "";
+      };
+
+      return veryGood();
+    } else if (choiceNumber < randomNumber) {
+      const lessRandom = () => {
+        plus.style.display = "";
+        less.style.display = "none";
+        myRed.style.display = "";
+        firstRate = false;
+      };
+      return lessRandom();
+    } else {
+      const plusRandom = () => {
+        myRed.style.display = "";
+        less.style.display = "";
+        plus.style.display = "none";
+        firstRate = false;
+      };
+      return plusRandom();
+    }
   });
-} catch (err) {
-  console.log(err);
-}
+});
